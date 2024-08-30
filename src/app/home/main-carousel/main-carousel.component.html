@@ -1,0 +1,11 @@
+<div class="relative">
+    <div class="carousel-container overflow-x-hidden w-full">
+        <div class="carousel transition-transform duration-500" [style.transform]="'translateX(-'+(currentSlide*100)+'%)'">
+            <ng-container *ngFor="let item of carouselData; let i = index">
+                <a [routerLink]="item.path" class="carousel-item block">
+                    <img [src]="item.image" alt="carousel image" class="w-full">
+                </a>
+            </ng-container>
+        </div>
+    </div>
+</div>
